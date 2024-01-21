@@ -1,3 +1,15 @@
+If you have a local clone, you can update it by running the following commands.
+
+git branch -m main backened
+git fetch origin
+git branch -u backened backened
+git remote set-head origin -a
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
