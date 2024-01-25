@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\TaskResources;
 use Illuminate\Http\Request;
 use App\Models\Task;
 
@@ -15,7 +16,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return Task::all();
+        // return Task::all();
+        return TaskResources::collection(Task::all());
 
     }
 
