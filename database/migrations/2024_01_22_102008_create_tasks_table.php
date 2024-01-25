@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('name');
             // $table->tinyInteger('na');
             $table->tinyInteger('status');
-            $table->string('username');
 
 
             $table->timestamps();

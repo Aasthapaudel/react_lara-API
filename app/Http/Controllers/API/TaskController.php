@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\TaskResources;
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Http\Requests\API\TaskRequest;
 
 class TaskController extends Controller
 {
@@ -27,9 +28,19 @@ class TaskController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TaskRequest $request)
     {
         //
+        // return $request->all();
+        Task::create([
+            'name'=>$request->name,
+            'status'=>$request->status
+
+        ]);
+        return response()->json([
+            'message'=>'Task saved successfully'
+
+        ],201);
     }
 
     /**
